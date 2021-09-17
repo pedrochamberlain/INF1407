@@ -23,7 +23,7 @@ Com o servidor inicializado, você pode fazer requisições para todos os arquiv
 
 ## O que foi feito
 
-– Foi implementado um servidor Web no arquivo `server.py`.
+- Foi implementado um servidor Web no arquivo `server.py`.
 - As configurações do servidor Web foram definidas no arquivo `config.py`.
 - O servidor Web implementado escuta a porta 8080.
 - O método GET foi implementado e retorna arquivos HTML, JS, JPEG (JPG), PNG e GIF que estejam presentes dentro da pasta do servidor. (Ex.: `http://localhost:8080/favicon.ico`) 
