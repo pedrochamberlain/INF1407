@@ -1,5 +1,5 @@
 # Programação para Web: Trabalho 1 – Implementando um Servidor Web
-Desenvolvido pelos alunos Mark Ribeiro (1612043) e Pedro Chamberlain Matos (1710883) para a matéria INF1407 – Programação para Web.
+Desenvolvido pelos alunos **Mark Ribeiro (1612043)** e **Pedro Chamberlain Matos (1710883)** para a matéria INF1407 – Programação para Web.
 
 ## Arquivos 
 - `server.py`: Arquivo escrito em Python com a implementação do Servidor Web.
