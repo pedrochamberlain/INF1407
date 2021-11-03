@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='br' dir='ltr'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Cadastrar Filme</title>
+    </head>
+    <body>
+        <h1>
+            Cadastre um filme
+        </h1>
+        <form class='' action='' method='post'>
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button type='submit'>Cadastrar</button>
+        </form>    
+    </body>
+</html>
