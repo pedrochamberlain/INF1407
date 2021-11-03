@@ -3,6 +3,8 @@ Web Development Course @ PUC-Rio 2021.2
 
 [Trabalho 1 – Implementação de um Servidor Web](https://github.com/pedrochamberlain/INF1407/tree/main/trab1)
 
+[Trabalho 1 – Implementação de um Website em Django](https://github.com/pedrochamberlain/INF1407/tree/main/trab2)
+
 ## Course Syllabus
 This web development course delves into the following topics: 
 > The architecture of the web: browsers; page and application servers; communication protocols. Building web applications: using a programming language; prototyping systems; using the MVC pattern and other design patterns; data persistence; installing the application. Tools for developing web applications. Javascript. AJAX.
