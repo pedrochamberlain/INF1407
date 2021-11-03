@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Registre uma nova conta:
+{% endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock content %}

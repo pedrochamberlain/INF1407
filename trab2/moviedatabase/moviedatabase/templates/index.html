@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='br' dir='ltr'>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %} {% endblock %} </title>
+    </head>
+    <body>
+        <h1>Movie Database</h1>
+        <div>
+            {% if not user.is_authenticated %}
+              <a href='{% url "register" %}'>Registre-se</a> |
+              <a href='{% url "login" %}'>Acesse sua conta</a> |
+            {% else %}
+              <a href='{% url "logout" %}'>Deslogue da sua conta</a> |
+            {% endif %}
+            Bem-vindo {% firstof user.first_name user.username %}!
+        </div>
+        {% block content %}  
+        {% endblock content %}
+    </body>
+</html>
