@@ -1,7 +1,7 @@
 # Programação para Web: Trabalho 2 – Implementando um Website em Django
 Desenvolvido pelos alunos **Mark Ribeiro (1612043)** e **Pedro Chamberlain Matos (1710883)** para a matéria INF1407 – Programação para Web.
 
-O website a ser implementado nesta disciplina será um portal composto por filmes e valores relacionados a eles.
+O website a ser implementado nesta disciplina será um portal utilizado por usuários onde eles podem adicionar filmes à uma lista e conferir valores relacionados a eles.
 
 ## Arquivos 
 - ...
