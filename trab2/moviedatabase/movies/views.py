@@ -6,8 +6,6 @@ from django.views.generic import View
 from movies.models import Filme
 from movies.forms import MovieModelForm
 
-# Create your views here.
-
 
 class create_movie(View):
     def get(self, request, *args, **kwargs):
