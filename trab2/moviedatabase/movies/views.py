@@ -13,6 +13,7 @@ class create_movie(View):
         return render(request, 'add_movie.html', context)
 
     def post(self, request, *args, **kwargs):
+        form = MovieModelForm(request.POST)
 
         if form.is_valid():
             movie = form.save()
