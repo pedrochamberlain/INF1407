@@ -20,7 +20,7 @@ from movies import views
 app_name = 'movies'
 
 urlpatterns = [
-    path('create/', views.create_movie.as_view(), name='add_movie'),
-    path('update/<int:pk>/', views.update_movie.as_view(), name='update_movie'),
-    path('list/', views.list_movies.as_view(), name='list_movies'),
+    path('create/', views.create_movie.as_view(), name='create'),
+    path('update/<int:pk>/', views.update_movie.as_view(), name='update'),
+    path('list/', views.list_movies.as_view(), name='list'),
 ]

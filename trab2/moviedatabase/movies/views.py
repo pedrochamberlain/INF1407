@@ -14,14 +14,13 @@ class create_movie(View):
 
     def post(self, request, *args, **kwargs):
 
-        form = MovieModelForm(request.POST)
-        if(form.is_valid()):
+        if form.is_valid():
             movie = form.save()
             movie.save()
 
-            return HttpResponseRedirect(reverse_lazy('list_movies'))
+            return HttpResponseRedirect(reverse_lazy('movies:list'))
         else:
-            return HttpResponseRedirect(reverse_lazy('add_movie'))
+            return HttpResponseRedirect(reverse_lazy('movies:create'))
 
 
 class update_movie(View):
@@ -29,16 +28,16 @@ class update_movie(View):
         movie = Filme.objects.get(pk=pk)
         form = MovieModelForm(instance=movie)
         context = {'form': form}
-        return render(request, 'update_movie.html', context)
+        return render(request, 'edit_movie.html', context)
 
     def post(self, request, pk, *args, **kwargs):
         movie = get_object_or_404(Filme, pk=pk)
         form = MovieModelForm(request.POST, instance=movie)
 
-        if(form.is_valid()):
+        if form.is_valid():
             movie = form.save()
             movie.save()
-        return HttpResponseRedirect(reverse_lazy('list_movies'))
+        return HttpResponseRedirect(reverse_lazy('movies:list'))
 
 
 class list_movies(View):

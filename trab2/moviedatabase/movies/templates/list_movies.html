@@ -21,8 +21,8 @@
           <td> {{movie.director}} </td>
           <td> {{movie.genre}} </td>
           <td> {{movie.country}} </td>
-          <td> {{movie.runtime}} </td>
-          <td> <a href="{% url 'update_movie' pk=movie.id %}"> Editar </a> </td>
+          <td> {{movie.runtime}} min. </td>
+          <td> <a href="{% url 'movies:update' pk=movie.id %}"> Editar </a> </td>
         </tr>
       {% empty %}
         Você ainda não cadastrou filmes
