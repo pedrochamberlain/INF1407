@@ -23,6 +23,7 @@
           <td> {{movie.country}} </td>
           <td> {{movie.runtime}} min. </td>
           <td> <a href="{% url 'movies:update' pk=movie.id %}"> Editar </a> </td>
+          <td> <a href="{% url 'movies:delete' pk=movie.id %}"> Deletar </a> </td>
         </tr>
       {% empty %}
         Você ainda não cadastrou filmes

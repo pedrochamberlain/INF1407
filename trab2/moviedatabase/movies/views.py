@@ -40,6 +40,19 @@ class update_movie(View):
         return HttpResponseRedirect(reverse_lazy('movies:list'))
 
 
+class delete_movie(View):
+    def get(self, request, pk, *args, **kwargs):
+        movie = Filme.objects.get(pk=pk)
+        movie.delete()
+
+        movies = Filme.objects.all()
+        context = {
+            'movies': movies
+        }
+
+        return HttpResponseRedirect(reverse_lazy('movies:list'))
+
+
 class list_movies(View):
     def get(self, request, *args, **kwargs):
         movies = Filme.objects.all()
