@@ -5,6 +5,10 @@
     <title>Lista de Filmes</title>
   </head>
   <body>
+    {% if not movie %}
+      <p>Por enquanto, nenhum filme foi cadastrado...</p>
+      <p>Quer ser o primeiro? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
+    {% else %}
     <table>
       <tr>
         <th> Título</th>
@@ -25,9 +29,11 @@
           <td> {{movie.runtime}} min. </td>
           <td> {{movie.logged_by}} </td>
         </tr>
-      {% empty %}
-        <p>Por enquanto, nenhum filme foi cadastrado...</p>
       {% endfor %}
     </table>
+    {% endif %}
+    <p>
+        <a href="{% url 'home'%}">Página inicial</a>
+    </p>
   </body>
 </html>
