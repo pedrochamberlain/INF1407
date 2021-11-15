@@ -24,4 +24,5 @@ urlpatterns = [
     path('update/<int:pk>/', views.update_movie.as_view(), name='update'),
     path('delete/<int:pk>/', views.delete_movie.as_view(), name='delete'),
     path('list/', views.list_movies.as_view(), name='list'),
+    path('list_all/', views.list_all_movies.as_view(), name='list_all'),
 ]

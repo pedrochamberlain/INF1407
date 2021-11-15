@@ -62,3 +62,12 @@ class list_movies(View):
             'movies': movies
         }
         return render(request, 'list_movies.html', context)
+
+
+class list_all_movies(View):
+    def get(self, request, *args, **kwargs):
+        movies = Filme.objects.all()
+        context = {
+            'movies': movies
+        }
+        return render(request, 'list_all_movies.html', context)
