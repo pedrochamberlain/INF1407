@@ -4,9 +4,13 @@
         <meta charset='utf-8'>
         <title>Atualizar Filme</title>
     </head>
+    {% if not user.is_authenticated %}
+        <h2>Você não está logado na sua conta!</h2>
+        <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para cadastrar seus filmes.</p>
+    {% else %}
     <body>
         <h1>
-            Atualize os campos do filme
+            Atualizar filme cadastrado
         </h1>
         <form class='' action='' method='post'>
             {% csrf_token %}
@@ -16,4 +20,5 @@
             <button type='submit'>Atualizar</button>
         </form>    
     </body>
+    {% endif %}
 </html>

@@ -4,6 +4,14 @@
         <meta charset='utf-8'>
         <title>Cadastrar Filme</title>
     </head>
+    {% if not user.is_authenticated %}
+        <h2>Você não está logado na sua conta!</h2>
+        <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para cadastrar seus filmes.</p>
+    {% else %}
+    <head>
+        <meta charset='utf-8'>
+        <title>Cadastrar Filme</title>
+    </head>
     <body>
         <h1>
             Cadastre um filme
@@ -16,4 +24,5 @@
             <button type='submit'>Cadastrar</button>
         </form>    
     </body>
+    {% endif %}
 </html>

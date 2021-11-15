@@ -16,7 +16,8 @@ class create_movie(View):
         form = MovieModelForm(request.POST)
 
         if form.is_valid():
-            movie = form.save()
+            movie = form.save(commit=False)
+            movie.logged_by = str(request.user)
             movie.save()
 
             return HttpResponseRedirect(reverse_lazy('movies:list'))
@@ -56,7 +57,7 @@ class delete_movie(View):
 
 class list_movies(View):
     def get(self, request, *args, **kwargs):
-        movies = Filme.objects.all()
+        movies = Filme.objects.filter(logged_by=request.user)
         context = {
             'movies': movies
         }
