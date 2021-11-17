@@ -2,26 +2,30 @@
 <!DOCTYPE html>
 <html lang='br' dir='ltr'>
     <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'index.css' %}">
         <meta charset="utf-8">
         <title>{% block title %} {% endblock %} </title>
     </head>
     <body>
         <h1>Movie Database</h1>
-        <div>
-            Bem-vindo {% firstof user.first_name user.username %}!
-            {% if not user.is_authenticated %}
-              <a href='{% url "register" %}'>Registre-se</a> |
-              <a href='{% url "login" %}'>Acesse sua conta</a>
-            {% else %}
-              <a href="{% url "logout" %}">Deslogue da sua conta</a>
-              <p>
-                <a href="{% url 'movies:create' %}">Cadastre um novo filme</a> | 
-                <a href="{% url 'movies:list' %}">Seus filmes cadastrados</a>
-              </p>
-            {% endif %}
-            <p><a href="{% url 'movies:list_all' %}">Filmes cadastrados pelos usuários do site</a></p>
+        <div class = "y">
+          <div class = "x">
+              Bem-vindo {% firstof user.first_name user.username %}!
+              {% if not user.is_authenticated %}
+                <a href='{% url "register" %}'>Registre-se</a> |
+                <a href='{% url "login" %}'>Acesse sua conta</a>
+              {% else %}
+                <a href="{% url "logout" %}">Deslogue da sua conta</a>
+                <p>
+                  <a href="{% url 'movies:create' %}">Cadastre um novo filme</a> | 
+                  <a href="{% url 'movies:list' %}">Seus filmes cadastrados</a>
+                </p>
+              {% endif %}
+              <p><a href="{% url 'movies:list_all' %}">Filmes cadastrados pelos usuários do site</a></p>
+          </div>
+          {% block content %}  
+          {% endblock content %}
         </div>
-        {% block content %}  
-        {% endblock content %}
     </body>
 </html>

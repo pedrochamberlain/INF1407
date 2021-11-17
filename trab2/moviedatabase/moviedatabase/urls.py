@@ -19,6 +19,8 @@ from django.urls.base import reverse_lazy
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 
@@ -31,4 +33,4 @@ urlpatterns = [
          name='logout'),
     path('accounts/profile/', views.index, name='profile'),
     path('movies/', include('movies.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
