@@ -36,7 +36,7 @@ class update_movie(View):
         movie = get_object_or_404(Filme, pk=pk)
         form = MovieModelForm(request.POST, instance=movie)
 
-        if movie.logged_by == request.user and form.is_valid():
+        if movie.logged_by == str(request.user) and form.is_valid():
             movie = form.save()
             movie.save()
         return HttpResponseRedirect(reverse_lazy('movies:list'))
@@ -45,7 +45,7 @@ class update_movie(View):
 class delete_movie(View):
     def get(self, request, pk, *args, **kwargs):
         movie = Filme.objects.get(pk=pk)
-        if movie.logged_by == request.user:
+        if movie.logged_by == str(request.user):
             movie.delete()
 
         movies = Filme.objects.all()
@@ -58,7 +58,7 @@ class delete_movie(View):
 
 class list_movies(View):
     def get(self, request, *args, **kwargs):
-        movies = Filme.objects.filter(logged_by=request.user)
+        movies = Filme.objects.filter(logged_by=str(request.user))
         context = {
             'movies': movies
         }
