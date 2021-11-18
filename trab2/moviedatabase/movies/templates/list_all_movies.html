@@ -5,7 +5,7 @@
     <title>Lista de Filmes</title>
   </head>
   <body>
-    {% if not movie %}
+    {% if not movies %}
       <p>Por enquanto, nenhum filme foi cadastrado...</p>
       <p>Quer ser o primeiro? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
     {% else %}
