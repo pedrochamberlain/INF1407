@@ -3,7 +3,7 @@ Web Development Course @ PUC-Rio 2021.2
 
 [Trabalho 1 – Implementação de um Servidor Web](https://github.com/pedrochamberlain/INF1407/tree/main/trab1)
 
-[Trabalho 1 – Implementação de um Website em Django](https://github.com/pedrochamberlain/INF1407/tree/main/trab2)
+[Trabalho 2 – Implementação de um Website em Django](https://github.com/pedrochamberlain/INF1407/tree/main/trab2)
 
 ## Course Syllabus
 This web development course delves into the following topics: 
