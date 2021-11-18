@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+
+import os
 import mimetypes
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '^wq+)%)c+oi%f4cw&3b^fgupb=lrr44kc_wkx98_ls_$!d9w(('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -77,12 +80,12 @@ WSGI_APPLICATION = 'moviedatabase.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'pedroch',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dd1dlcmkdeaja7',
+        'USER': 'lemlfyrtggrgkh',
+        'PASSWORD': 'ee0e71bc10c98ed99566e6d09cbb88094c0a9b4bbed928589e54877f27ebde9f',
+        'HOST': 'ec2-3-209-38-221.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -123,10 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
-   '/static/',
+    'moviedatabase/static/',
 )
 
 mimetypes.add_type("text/css", ".css", True)
+django_heroku.settings(locals())
