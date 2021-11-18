@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Filme(models.Model):
-
+    id = models.AutoField(primary_key=True)
     title = models.CharField(
         max_length=100, verbose_name='Título do filme')
     year_of_release = models.IntegerField(
