@@ -81,4 +81,4 @@ Os usuários possuirão acesso a quatro páginas:
 - Commits foram publicados semanalmente durante o desenvolvimento do projeto.
 - Javascript e requisições AJAX não foram desenvolvidas para o projeto.
 
-**[Volte para o início](#sobre-o-site)**
+**[Volte para o início](#sumário)**
