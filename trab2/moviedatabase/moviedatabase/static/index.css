@@ -10,13 +10,11 @@ body {
 }
 .x {
     color: white;
-    /*background-color: red;*/
     width: fit-content;
     margin: auto;
 }
 
 .y {
-    /*background-color: blue;*/
     display: flex;
     width: 100%;
     justify-content: center;

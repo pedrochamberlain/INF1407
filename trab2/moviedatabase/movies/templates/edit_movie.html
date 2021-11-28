@@ -11,19 +11,23 @@
         <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para cadastrar seus filmes.</p>
     {% else %}
     <body>
+        <p>
+            <a href="{% url 'home'%}">Página inicial</a>
+        </p>
         <h1>
             Atualizar filme cadastrado
         </h1>
-        <form class='' action='' method='post'>
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-            </table>
-            <button type='submit'>Atualizar</button>
-        </form>    
+        <div class = "y">
+            <div class = "x">
+                <form class='' action='' method='post'>
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    <button type='submit'>Atualizar</button>
+                </form>    
+            </div>
+        </div>
     </body>
     {% endif %}
-    <p>
-        <a href="{% url 'home'%}">Página inicial</a>
-    </p>
 </html>
