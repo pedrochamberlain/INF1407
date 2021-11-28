@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
     <meta charset="utf-8">
     <title>Lista de Filmes</title>
   </head>
   <body>
-    {% if not movies %}
-      <p>Por enquanto, nenhum filme foi cadastrado...</p>
-      <p>Quer ser o primeiro? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
-    {% else %}
-    <table>
-      <tr>
-        <th> Título</th>
-        <th> Ano de lançamento </th>
-        <th> Diretor </th>
-        <th> Gênero </th>
-        <th> País de Origem </th>
-        <th> Duração </th>
-        <th> Cadastrado por: </th>
-      </tr>
-      {% for movie in movies %}
-        <tr>
-          <td> {{movie.title}} </td>
-          <td> {{movie.year_of_release}} </td>
-          <td> {{movie.director}} </td>
-          <td> {{movie.genre}} </td>
-          <td> {{movie.country}} </td>
-          <td> {{movie.runtime}} min. </td>
-          <td> {{movie.logged_by}} </td>
-        </tr>
-      {% endfor %}
-    </table>
-    {% endif %}
     <p>
-        <a href="{% url 'home'%}">Página inicial</a>
+      <a href="{% url 'home'%}">Página inicial</a>
     </p>
+    <div class = "y">
+      <div class = "x">
+        {% if not movie %}
+          <p>Por enquanto, nenhum filme foi cadastrado...</p>
+          <p>Quer ser o primeiro? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
+        {% else %}
+        <table>
+          <tr>
+            <th> Título</th>
+            <th> Ano de lançamento </th>
+            <th> Diretor </th>
+            <th> Gênero </th>
+            <th> País de Origem </th>
+            <th> Duração </th>
+            <th> Cadastrado por: </th>
+          </tr>
+          {% for movie in movies %}
+            <tr>
+              <td> {{movie.title}} </td>
+              <td> {{movie.year_of_release}} </td>
+              <td> {{movie.director}} </td>
+              <td> {{movie.genre}} </td>
+              <td> {{movie.country}} </td>
+              <td> {{movie.runtime}} min. </td>
+              <td> {{movie.logged_by}} </td>
+            </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+      </div>
+    </div>
   </body>
 </html>

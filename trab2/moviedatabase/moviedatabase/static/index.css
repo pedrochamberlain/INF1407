@@ -4,6 +4,7 @@ h1 {
     text-align: center;
   }
 body {
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #14181C;
 }
@@ -24,4 +25,8 @@ body {
 
 a, a:visited {
     color: white;
+}
+
+form {
+    text-align: center;
 }

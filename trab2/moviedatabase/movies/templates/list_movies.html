@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
     <meta charset="utf-8">
     <title>Lista de Filmes</title>
   </head>
   <body>
-    {% if not user.is_authenticated %}
-        <h2>Você não está logado na sua conta!</h2>
-        <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para poder ver seus filmes cadastrados.</p>
-    {% else %}
-      {% if not movies %}
-        <p>Por enquanto, você não cadastrou nenhum filme...</p>
-        <p>Por que não começar agora? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
-      {% else %}
-      <table>
-        <tr>
-          <th> Título </th>
-          <th> Ano de lançamento </th>
-          <th> Diretor </th>
-          <th> Gênero </th>
-          <th> País de Origem </th>
-          <th> Duração </th>
-        </tr>
-        {% for movie in movies %}
-          <tr>
-            <td> {{movie.title}} </td>
-            <td> {{movie.year_of_release}} </td>
-            <td> {{movie.director}} </td>
-            <td> {{movie.genre}} </td>
-            <td> {{movie.country}} </td>
-            <td> {{movie.runtime}} min. </td>
-            <td> <a href="{% url 'movies:update' pk=movie.id %}"> Editar </a> </td>
-            <td> <a href="{% url 'movies:delete' pk=movie.id %}"> Deletar </a> </td>
-          </tr>
-          {% endfor %}
-      </table>
-      {% endif %}
-    {% endif %}
     <p>
-        <a href="{% url 'home'%}">Página inicial</a>
+      <a href="{% url 'home'%}">Página inicial</a>
     </p>
+    <div class = "y">
+      <div class = "x">
+        {% if not user.is_authenticated %}
+            <h2>Você não está logado na sua conta!</h2>
+            <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para poder ver seus filmes cadastrados.</p>
+        {% else %}
+          {% if not movie %}
+            <p>Por enquanto, você não cadastrou nenhum filme...</p>
+            <p>Por que não começar agora? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
+          {% else %}
+          <table>
+            <tr>
+              <th> Título </th>
+              <th> Ano de lançamento </th>
+              <th> Diretor </th>
+              <th> Gênero </th>
+              <th> País de Origem </th>
+              <th> Duração </th>
+            </tr>
+            {% for movie in movies %}
+              <tr>
+                <td> {{movie.title}} </td>
+                <td> {{movie.year_of_release}} </td>
+                <td> {{movie.director}} </td>
+                <td> {{movie.genre}} </td>
+                <td> {{movie.country}} </td>
+                <td> {{movie.runtime}} min. </td>
+                <td> <a href="{% url 'movies:update' pk=movie.id %}"> Editar </a> </td>
+                <td> <a href="{% url 'movies:delete' pk=movie.id %}"> Deletar </a> </td>
+              </tr>
+              {% endfor %}
+          </table>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
   </body>
 </html>
