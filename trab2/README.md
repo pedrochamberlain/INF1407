@@ -80,3 +80,5 @@ Os usuários possuirão acesso a quatro páginas:
 - O git foi utilizado para o controle de versão do site, sendo armazenado neste repositório público.
 - Commits foram publicados semanalmente durante o desenvolvimento do projeto.
 - Javascript e requisições AJAX não foram desenvolvidas para o projeto.
+
+**[Volte para o início](#sobre-o-site)**
