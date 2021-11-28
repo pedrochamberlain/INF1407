@@ -3,6 +3,12 @@ Desenvolvido pelos alunos **Mark Ribeiro (1612043)** e **Pedro Chamberlain Matos
 
 Domínio oficial do site: https://inf1407-moviedatabase.herokuapp.com/
 
+## Sumário
+1. [Sobre o site](#sobre-o-site)
+2. [Manual de usuário – Como o usar o site?](#como-usar-o-site)
+3. [Arquivos do repositório](#pastas-e-arquivos)
+4. [O que foi feito](#o-que-foi-feito)
+
 ## Sobre o site
 
 O website a ser implementado nesta disciplina é o **Movie Database**. O Movie Database é um portal voltado para usuários que desejam cadastrar/logar filmes que eles já assistiram, podendo conferir uma lista pessoal de filmes, assim como valores relacionados a eles, como por exemplo:
@@ -21,7 +27,7 @@ Os usuários possuirão acesso a quatro páginas:
 3. Uma página para conferir seus filmes cadastrados
 4. Uma página para conferir todos filmes cadastrados no site, podendo conferir o que cada usuário cadastrou.
 
-## Manual de usuário: Como usar o site
+## Como usar o site
 1. Para acessar o site, acesse o [domínio principal da página](https://inf1407-moviedatabase.herokuapp.com/).
 2. Antes de cadastrar filmes, registre sua conta na página principal.
 3. Após registrar-se, faça login na sua conta na página principal.
@@ -31,7 +37,7 @@ Os usuários possuirão acesso a quatro páginas:
 7. Caso você queira deletar um filme cadastrado, acesse [sua lista de filmes](https://inf1407-moviedatabase.herokuapp.com/movies/list/) e clique o botão `Deletar` ao lado do filme desejado.
 8. Para ver a lista com todos os filmes cadastrados do site, confira a [página listando todos filmes do site](https://inf1407-moviedatabase.herokuapp.com/movies/list_all/). Cada filme terá suas características listados e o respectivo usuário que o cadastrou.
 
-## Arquivos do repositório
+## Pastas e arquivos
 - `moviedatabase/`: Pasta principal do projeto Django.
 
   - `moviedatabase/`: Pasta para configuração do acesso de contas do site, templates, views e a configuração de diretórios do domínio principal.
