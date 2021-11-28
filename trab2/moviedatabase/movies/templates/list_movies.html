@@ -16,7 +16,7 @@
             <h2>Você não está logado na sua conta!</h2>
             <p>Acesse sua conta na <a href="{% url 'home'%}">página inicial</a> para poder ver seus filmes cadastrados.</p>
         {% else %}
-          {% if not movie %}
+          {% if not movies %}
             <p>Por enquanto, você não cadastrou nenhum filme...</p>
             <p>Por que não começar agora? Acesse a <a href="{% url 'movies:create'%}"> página de cadastro de filmes.</p>
           {% else %}
