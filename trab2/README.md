@@ -3,6 +3,8 @@ Desenvolvido pelos alunos **Mark Ribeiro (1612043)** e **Pedro Chamberlain Matos
 
 Domínio oficial do site: https://inf1407-moviedatabase.herokuapp.com/
 
+## Sobre o site
+
 O website a ser implementado nesta disciplina é o **Movie Database**. O Movie Database é um portal voltado para usuários que desejam cadastrar/logar filmes que eles já assistiram, podendo conferir uma lista pessoal de filmes, assim como valores relacionados a eles, como por exemplo:
 - Título
 - Ano de lançamento
@@ -27,7 +29,7 @@ Os usuários possuirão acesso a quatro páginas:
 5. Após cadastrar um novo filme, você poderá encontrá-lo na [lista dos seus filmes](https://inf1407-moviedatabase.herokuapp.com/movies/list/).
 6. Para ver a lista com todos os cadastros do site, confira a [página listando todos filmes do site](https://inf1407-moviedatabase.herokuapp.com/movies/list_all/)
 
-## Arquivos 
+## Arquivos do repositório
 - `moviedatabase/`: Pasta principal do projeto.
 
   - `moviedatabase/`: Pasta para configuração do acesso de contas do site.
