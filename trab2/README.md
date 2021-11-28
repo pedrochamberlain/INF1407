@@ -21,18 +21,20 @@ Os usuários possuirão acesso a quatro páginas:
 3. Uma página para conferir seus filmes cadastrados
 4. Uma página para conferir todos filmes cadastrados no site, podendo conferir o que cada usuário cadastrou.
 
-## Como usar o site
+## Manual de usuário: Como usar o site
 1. Para acessar o site, acesse o [domínio principal da página](https://inf1407-moviedatabase.herokuapp.com/).
 2. Antes de cadastrar filmes, registre sua conta na página principal.
 3. Após registrar-se, faça login na sua conta na página principal.
 4. Acesse a [página de cadastro de novo filme](https://inf1407-moviedatabase.herokuapp.com/movies/create/) para adicionar um filme a sua lista.
 5. Após cadastrar um novo filme, você poderá encontrá-lo na [lista dos seus filmes](https://inf1407-moviedatabase.herokuapp.com/movies/list/).
-6. Para ver a lista com todos os cadastros do site, confira a [página listando todos filmes do site](https://inf1407-moviedatabase.herokuapp.com/movies/list_all/)
+6. Caso você deseje editar um filme já cadastrado, acesse a [sua lista de filmes](https://inf1407-moviedatabase.herokuapp.com/movies/list/) e clique o botão `Editar` ao lado do filme desejado. 
+7. Caso você queira deletar um filme cadastrado, acesse [sua lista de filmes](https://inf1407-moviedatabase.herokuapp.com/movies/list/) e clique o botão `Deletar` ao lado do filme desejado.
+8. Para ver a lista com todos os filmes cadastrados do site, confira a [página listando todos filmes do site](https://inf1407-moviedatabase.herokuapp.com/movies/list_all/). Cada filme terá suas características listados e o respectivo usuário que o cadastrou.
 
 ## Arquivos do repositório
-- `moviedatabase/`: Pasta principal do projeto.
+- `moviedatabase/`: Pasta principal do projeto Django.
 
-  - `moviedatabase/`: Pasta para configuração do acesso de contas do site.
+  - `moviedatabase/`: Pasta para configuração do acesso de contas do site, templates, views e a configuração de diretórios do domínio principal.
   
     - `templates/`: Pasta com os templates HTML utilizadas na página inicial, de cadastro e login do site. 
       - `index.html`: Página inicial do site.
@@ -44,7 +46,7 @@ Os usuários possuirão acesso a quatro páginas:
     - `views.py`:  Configuração das funções do site que recebem requisições HTTP e retornam respostas.
     - `wsgi.py`: Especificação para deploy do site.
     
-  - `movies/`: Pasta para configuração do modelo `Filme` e operações CRUD relacionadas a ele, assim como templates, views relacionadas, e a configuração de domínio.
+  - `movies/`: Pasta para configuração do modelo `Filme` e operações CRUD relacionadas a ele, assim como templates, views e a configuração de subdiretórios `/movies/*` do domínio.
   
     - `templates/`: Pasta com os templates HTML utilizadas na adição, atualização e listagem individual e completa dos filmes da database do site. 
     
@@ -63,3 +65,12 @@ Os usuários possuirão acesso a quatro páginas:
   - `Procfile`: Configuração de deploy do Heroku.
   - `requirements.txt`: Arquivo que especifica os requerimentos de biblioteca do projeto.
   - `runtime.txt`: Configuração de linguagem utilizada para o deploy do Heroku. Foi utilizada para criar o arquivo `Pipfile`.
+
+## O que foi feito
+- Foi elaborado um site em Python + Django, HTML e CSS.
+- - O site contém operações de login, acesso e ações selecionadas por usuário. Cada usuário possui uma visão diferente da página de listagem de filmes pessoalmente cadastrados.
+- O site contém as quatro operações básicas em banco de dados (CRUD) com o modelo de `Filme`.
+- O site foi publicado em um provedor de serviço Web (Heroku).
+- O git foi utilizado para o controle de versão do site, sendo armazenado neste repositório público.
+- Commits foram publicados semanalmente durante o desenvolvimento do projeto.
+- Javascript e requisições AJAX não foram desenvolvidas para o projeto.
